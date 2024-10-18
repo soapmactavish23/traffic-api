@@ -1,8 +1,10 @@
 # Exercício 01 - Arquitetura de Software PPCA
 
+<img src="./prints/diagrama.png" align="center">
+
 ## Aluno: Henrick de Sousa Nogueira
 
-## Version: v0
+## End-points
 
 ### /traffic-control/heavy
 
