@@ -1,5 +1,6 @@
 package br.ufpa.traffic_api.models;
 
+import br.ufpa.traffic_api.utils.Constants;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,6 +11,6 @@ public class HeavyTrafficState implements TrafficState {
 
     @Override
     public void handleTraffic() {
-        log.info("Trânsito intenso, veículos se movendo lentamente.");
+        log.info(Constants.HEAVY);
     }
 }

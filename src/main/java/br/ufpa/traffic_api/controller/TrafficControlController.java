@@ -1,11 +1,13 @@
 package br.ufpa.traffic_api.controller;
 
+import br.ufpa.traffic_api.TrafficControlDocumentation;
 import br.ufpa.traffic_api.models.TrafficControl;
+import br.ufpa.traffic_api.utils.Constants;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/traffic-control")
-public class TrafficControlController {
+public class TrafficControlController implements TrafficControlDocumentation {
 
     private final TrafficControl trafficControl;
 
@@ -13,12 +15,42 @@ public class TrafficControlController {
         this.trafficControl = new TrafficControl();
     }
 
+    @Override
     @GetMapping("/current-state")
     public String getCurrentState() {
         trafficControl.handleTraffic();
         return "Estado atual do tráfego processado.";
     }
 
+    @Override
+    @PutMapping("/free")
+    public String freeState() {
+        trafficControl.changeState(trafficControl.getFreeFlowState());
+        return Constants.FREE;
+    }
+
+    @Override
+    @PutMapping("/heavy")
+    public String heavyState() {
+        trafficControl.changeState(trafficControl.getHeavyTrafficState());
+        return Constants.HEAVY;
+    }
+
+    @Override
+    @PutMapping("/congested")
+    public String congestedState() {
+        trafficControl.changeState(trafficControl.getCongestedState());
+        return Constants.CONGESTED;
+    }
+
+    @Override
+    @PutMapping("/closed")
+    public String closedState() {
+        trafficControl.changeState(trafficControl.getClosedState());
+        return Constants.CLOSED;
+    }
+
+    @Override
     @PostMapping("/change-state")
     public String changeState(@RequestParam String state) {
         switch (state.toLowerCase()) {

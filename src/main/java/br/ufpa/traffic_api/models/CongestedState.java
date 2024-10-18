@@ -1,5 +1,6 @@
 package br.ufpa.traffic_api.models;
 
+import br.ufpa.traffic_api.utils.Constants;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,6 +11,6 @@ public class CongestedState implements TrafficState {
 
     @Override
     public void handleTraffic() {
-        log.info("Trânsito congestionado, quase parado.");
+        log.info(Constants.CONGESTED);
     }
 }
