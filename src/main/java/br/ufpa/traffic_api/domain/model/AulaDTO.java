@@ -1,10 +1,9 @@
 package br.ufpa.traffic_api.domain.model;
 
+import java.util.Date;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @Data
 public class AulaDTO {

@@ -4,88 +4,22 @@
 
 ## Aluno: Henrick de Sousa Nogueira
 
-## End-points
+## 📚 Descrição
 
-### /traffic-control/heavy
+## 🛠 Tecnologias
 
-#### PUT
-##### Summary:
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="20" width="20"/> [Java](https://www.java.com/pt-BR)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="20" width="20"/> [Spring Boot](https://spring.io/projects/spring-boot)
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="20" width="20"/> [MySQL](https://www.mysql.com/)
 
-Recursos para modificar o estado para HEAVY
 
-##### Responses
+## End-point
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Trânsito intenso, veículos se movendo lentamente. |
-
-### /traffic-control/free
-
-#### PUT
-##### Summary:
-
-Recursos para modificar o estado para FREE
-
-##### Responses
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Trânsito fluindo livremente. |
-
-### /traffic-control/congested
-
-#### PUT
-##### Summary:
-
-Recursos para modificar o estado para CONGESTED
-
-##### Responses
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Trânsito congestionado, quase parado. |
-
-### /traffic-control/closed
-
-#### PUT
-##### Summary:
-
-Recursos para modificar o estado para CLOSED
-
-##### Responses
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Estrada fechada para veículos. |
-
-### /traffic-control/change-state
+### /api/aulas/iniciar
 
 #### POST
-##### Summary:
-
-Recursos para modificar o estado baseado no parâmetro
-
-##### Parameters
-
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| state | query |  | Yes | string |
-
 ##### Responses
 
 | Code | Description |
 | ---- | ----------- |
-| 200 | O estado do tráfego foi alterado para: ... |
-
-### /traffic-control/current-state
-
-#### GET
-##### Summary:
-
-Recursos para checar estado atual de tráfego
-
-##### Responses
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | O estado do tráfego foi alterado para: ... |
+| 204 | No Content |
